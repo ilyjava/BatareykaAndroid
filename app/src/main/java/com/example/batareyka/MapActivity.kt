@@ -2,6 +2,7 @@ package com.example.batareyka
 
 import android.Manifest.permission.ACCESS_FINE_LOCATION
 import android.content.pm.PackageManager.PERMISSION_GRANTED
+import android.graphics.Color
 import android.graphics.Color.TRANSPARENT
 import android.graphics.PointF
 import android.os.Bundle
@@ -144,7 +145,7 @@ class MapActivity : AppCompatActivity(), UserLocationObjectListener, CameraListe
 
         userLocationView.pin.setIcon(fromResource(this, R.drawable.user_arrow))
         userLocationView.arrow.setIcon(fromResource(this, R.drawable.user_arrow))
-        userLocationView.accuracyCircle.strokeColor = TRANSPARENT
+        userLocationView.accuracyCircle.fillColor = Color.argb(70, 51, 204,51)
     }
 
     override fun onObjectUpdated(p0: UserLocationView, p1: ObjectEvent) {}
